@@ -39,8 +39,8 @@ module Api
 
                 if article.update(article_params)
                     render json: {status:'SUCCESS', message:'updated article', data:article},status: :ok
-                                    else
-render json: {status:'ERROR', message:'article not updated', data:article.errors.full_messages},status: :unprocessable_entity
+                     else
+                        render json: {status:'ERROR', message:'article not updated', data:article.errors.full_messages},status: :unprocessable_entity
                 end
 
             end
